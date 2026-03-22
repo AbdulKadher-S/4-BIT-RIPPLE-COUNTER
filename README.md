@@ -24,17 +24,54 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Create New Project
+2.Create Verilog/VHDL File
+3.Compile the Design
+4.Simulate Using Waveform
+5.Verify Output
 
 **PROGRAM**
 
 /* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
 
- Developed by: RegisterNumber:
+ Developed by:Abdul Kadher S RegisterNumber:212225230002
 */
+```
+module ripcounter(clk,rst,t,A,B,C,D); 
+input clk,rst,t; 
+output A,B,C,D;
+wire A,B,C,D;
+
+TFlipFlop T0(D,clk,rst,t); 
+TFlipFlop T1(C,D,rst,t); 
+TFlipFlop T2(B,C,rst,t); 
+TFlipFlop T3(A,B,rst,t); 
+
+endmodule 
+
+
+
+module TFlipFlop(q,clk,rst,t); 
+input clk,rst,t; 
+output reg q;
+
+always @(posedge clk) 
+begin 
+    if(!rst)
+        q <= 0;
+    else
+        q <= (t ? ~q : q);
+end
+
+endmodule
+```
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
+<img width="1597" height="280" alt="image" src="https://github.com/user-attachments/assets/0d8d4332-a3c1-4166-8f93-226bcbcae35b" />
+
 
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
+<img width="1920" height="1080" alt="bitripple2" src="https://github.com/user-attachments/assets/e3b0e905-f16d-49fe-b7d4-255e096ae066" />
 
 **RESULTS**
+The ripple counter was successfully designed and implemented using Quartus Prime. 
