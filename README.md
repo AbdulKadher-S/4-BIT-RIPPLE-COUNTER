@@ -25,9 +25,13 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 **Procedure**
 
 1.Create New Project
+
 2.Create Verilog/VHDL File
+
 3.Compile the Design
+
 4.Simulate Using Waveform
+
 5.Verify Output
 
 **PROGRAM**
@@ -67,7 +71,8 @@ endmodule
 ```
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
-<img width="1597" height="280" alt="image" src="https://github.com/user-attachments/assets/0d8d4332-a3c1-4166-8f93-226bcbcae35b" />
+<img width="1597" height="240" alt="bitripple11" src="https://github.com/user-attachments/assets/d2f73050-a36d-4b89-9b46-857ed8f1c5b2" />
+
 
 
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
